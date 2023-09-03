@@ -14,15 +14,25 @@ The original VGG network has 5 convolutional blocks, where the first two blocks 
 ![Alt text](image/image-1.png)
 
 Input shape: (32, 32, 3)
+
 Block 1: (16, 16, 64)
+
 Block 2: (8, 8, 128)
+
 Block 3: (4, 4, 256)
+
 Block 4: (2, 2, 512)
+
 Block 5: (2, 2, 512)
+
 Dense 1: (4096)
+
 Dense 2: (4096)
+
 Dense 3: (10)
+
 Act: softmax
+
 The model has a total of 28,144,010 parameters
 After block 5 instead of using Flaten I use MaxGlobal, since I want to get the most prominent features of each channel instead of the whole set of values ​​this may reduce the efficiency of the model but it reduces the parameters so the learning process becomes faster.
 The accuracy of the VGG-11 model with Cifar-10 dataset is 84.82%
@@ -33,13 +43,21 @@ In the Letnet5 network, there are two parts: convolutional layers and fully conn
 ![Alt text](image/image.png)
 
 Input shape: (32, 32, 3)
+
 Conv2D(1): (28, 28, 6)
+
 Conv2D(2): (10, 10, 16)
+
 Dense 1: 120
+
 Desen 2: 84
+
 Dense 3: 10
+
 Act: Softmax
+
 The model has a total of 62,006
+
 The accuracy of the Letnet-5 model with Cifar-10 dataset is 54.75%
 
 ## Result
