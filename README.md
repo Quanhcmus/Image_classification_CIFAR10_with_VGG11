@@ -12,6 +12,7 @@ validation set with rate ( 0.75, 0.25), I used the **VGG-11** model and **CNN(Le
 ### VGG-11 Model
 The original VGG network has 5 convolutional blocks, where the first two blocks consist of one convolutional layer each, the remaining three blocks contain two convolutional layers each. The first block has 64 output channels, each subsequent block doubles the number of output channels until reaching the value 512. Because this network uses 8 convolution layer and 3 fully connected layer so it is often called VGG-11.
 ![Alt text](image/image-1.png)
+
 Input shape: (32, 32, 3)
 Block 1: (16, 16, 64)
 Block 2: (8, 8, 128)
@@ -30,6 +31,7 @@ In the Letnet5 network, there are two parts: convolutional layers and fully conn
 + In the convolution part, there are 2 convolution layers along with 2 averaging layers with relu activation function The average pooling layer extracts features smoother than max pooling
 + In fully connected, there will be 3 layers with outputs of 120, 84, and 10 
 ![Alt text](image/image.png)
+
 Input shape: (32, 32, 3)
 Conv2D(1): (28, 28, 6)
 Conv2D(2): (10, 10, 16)
